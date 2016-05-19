@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">DustIn Controller</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <string name="level_status">DustBin Level Status</string>
+
+    <!-- General settings -->
+    <string name="pref_header_general">General</string>
+    <string name="pref_address_key">address</string>
+    <string name="pref_summary_address">Enter the address of web service</string>
+    <string name="pref_title_address">Web Service Address</string>
+
+</resources>
