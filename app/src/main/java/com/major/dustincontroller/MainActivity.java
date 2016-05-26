@@ -121,10 +121,19 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                 intent.putExtra(PreferenceActivity.EXTRA_SHOW_FRAGMENT, SettingsActivity.GeneralPreferenceFragment.class.getName());
                 intent.putExtra(PreferenceActivity.EXTRA_NO_HEADERS, true);
                 startActivity(intent);
-                return true;
+                break;
+            case R.id.action_refresh:
+                if (!HOST.isEmpty()) {
+                    getLocation();
+                    getLevel();
+                } else {
+                    Toast.makeText(this, "Web Service Address is not set!", Toast.LENGTH_SHORT).show();
+                }
+                break;
             default:
                 return super.onOptionsItemSelected(item);
         }
+        return true;
     }
 
     @Override
